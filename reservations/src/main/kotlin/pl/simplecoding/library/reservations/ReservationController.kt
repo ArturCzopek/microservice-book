@@ -14,4 +14,7 @@ class ReservationController(private val reservationService: ReservationService) 
 
     @GetMapping("/book/{bookId}")
     fun getBookReservations(@PathVariable bookId: Long) = reservationService.getBookReservations(bookId)
+
+    @PostMapping("/new")
+    fun makeReservation(@RequestBody newReservationDTO: NewReservationDTO) = reservationService.makeReservation(newReservationDTO.userId, newReservationDTO.bookId, newReservationDTO.days)
 }

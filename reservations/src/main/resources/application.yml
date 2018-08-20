@@ -24,3 +24,6 @@ spring:
 server:
   address: localhost
   port: 8081
+
+sc:
+  book-service-url: http://localhost:8080/api/books/

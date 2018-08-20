@@ -29,3 +29,20 @@ data class ReservationDTO(
         val bookId: Long = 0,
         val to: LocalDateTime = LocalDateTime.now().plusDays(7)
 )
+
+data class BookDTO(
+        val title: String = "",
+        val author: String = "",
+        val releaseYear: Int = 0
+)
+
+data class ReservationWithBookDTO(
+        val reservation: ReservationDTO,
+        val book: BookDTO?
+)
+
+data class NewReservationDTO(
+        val userId: Long,
+        val bookId: Long,
+        val days: Long
+)
